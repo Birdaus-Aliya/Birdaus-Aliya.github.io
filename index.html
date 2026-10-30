@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Birdaus Aliya's personal portfolio showcasing skills, projects, and contact information.">
+<meta name="description" content="Birdaus Aliya's portfolio: skills, projects, learning journey, and contact information.">
 <meta name="theme-color" content="#fff8fb">
 <title>Birdaus Aliya | Portfolio</title>
 <style>
@@ -32,7 +32,7 @@ button, input, textarea { font: inherit; }
 a { color: inherit; text-decoration: none; }
 #app { min-height: 100vh; width: 100%; background-color: var(--site-background); color: var(--site-on-background); border-radius: 0; overflow: clip; }
 .wrap { width: min(1120px, calc(100% - 44px)); margin: 0 auto; }
-.nav-shell { position: sticky; top: 0; z-index: 20; background: light-dark(rgba(248,247,252,.9), rgba(23,20,39,.92)); border-bottom: 1px solid var(--border); backdrop-filter: blur(16px); }
+.nav-shell { position: sticky; top: 0; z-index: 20; background: rgba(255,248,251,.94); border-bottom: 1px solid var(--border); backdrop-filter: blur(16px); }
 .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: -.04em; }
 .brand-mark { width: 40px; height: 40px; border-radius: 14px; display: grid; place-items: center; color: var(--site-on-primary); background: var(--site-primary); font-size: 14px; letter-spacing: -.03em; }
@@ -104,14 +104,14 @@ h2 { font-size: clamp(30px, 4vw, 44px); letter-spacing: -.05em; line-height: 1.1
 .contact-box { background: linear-gradient(135deg,#fff0f6,#f8eaf0 55%,#f4eee9); color: #35202c; border: 1px solid var(--border); border-radius: calc(28px * var(--site-radius-scale)); padding: clamp(28px, 5vw, 56px); display: grid; grid-template-columns: .9fr 1.1fr; gap: 38px; align-items: stretch; position: relative; overflow: hidden; box-shadow: var(--shadow); }.contact-box::after { content: "✧"; position: absolute; width: 220px; height: 220px; right: -38px; top: -110px; color: rgba(212,92,145,.12); font-size: 230px; pointer-events:none; }.contact-box h2 { max-width: 600px; position: relative; z-index: 1; }.contact-box p { color: #806b77; line-height: 1.7; margin-bottom: 24px; position: relative; z-index: 1; }.contact-details { display:grid; gap:16px; position:relative; z-index:1; }.contact-detail { display:flex; align-items:center; gap:12px; }.contact-detail-icon { width:42px; height:42px; flex:0 0 42px; display:grid; place-items:center; border-radius:13px; background:#f7dce8; color:#9d3e6a; font-size:18px; }.contact-detail small { display:block; color:#806b77; text-transform:uppercase; font-size:10px; font-weight:800; letter-spacing:.12em; margin-bottom:4px; }.contact-detail a,.contact-detail strong { font-size:13px; overflow-wrap:anywhere; }.contact-form { background:rgba(255,255,255,.88); border:1px solid rgba(240,216,227,.9); border-radius:22px; padding:clamp(20px,3vw,34px); display:grid; gap:18px; position:relative; z-index:1; }.contact-form label { display:grid; gap:7px; color:#806b77; font-size:12px; }.contact-form input,.contact-form textarea { width:100%; border:0; border-bottom:1px solid #d8bdca; border-radius:0; padding:12px 0; background:transparent; outline:none; color:#35202c; }.contact-form input:focus,.contact-form textarea:focus { border-color:var(--site-primary); box-shadow:0 1px 0 var(--site-primary); }.contact-form textarea { resize:vertical; min-height:86px; }.contact-form .btn { width:100%; }.form-note { font-size:11px; color:#806b77; margin:0; }
 footer { padding: 28px 0; color: var(--muted); font-size: 12px; }.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }.socials { display: flex; gap: 16px; }.socials a:hover { color: var(--site-primary); }
 .reveal { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: no-preference) { .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; } .reveal.visible { opacity: 1; transform: translateY(0); } }
-@media (prefers-color-scheme: dark) { :root { --site-background: #171427; --site-secondary: #30284e; --site-on-secondary: #e5ddff; --site-on-background: #f3f0ff; --muted: #b2adc8; --surface: #211d35; --border: #39334f; --shadow: 0 18px 55px rgba(0,0,0,.22); } .nav-shell { background: rgba(23,20,39,.9); } .project-type { background: #302b43; } .project-visual { background: linear-gradient(135deg,#30284e,#38283e); } .project:nth-child(2) .project-visual { background: linear-gradient(135deg,#203a37,#252d4a); } .project:nth-child(3) .project-visual { background: linear-gradient(135deg,#49352b,#382a4c); } .project-window { background: rgba(255,255,255,.9); } .profile-orbit { background: linear-gradient(145deg,#30284e,#38283e); } }
+@media (prefers-reduced-motion: no-preference) { .reveal.visible { opacity: 1; transform: translateY(0); } }
 @media (max-width: 900px) { .nav-links { gap: 13px; }.nav-links a { font-size:12px; }.nav-cta { display: none; }.hero-grid { grid-template-columns: minmax(0,1.1fr) minmax(220px,.8fr); gap:24px; }.project-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }.project:last-child { grid-column: auto; }.skills-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 700px) { .wrap { width: min(100% - 32px, 1120px); }.nav { min-height: 68px; }.brand-name {font-size:13px}.menu-toggle { display: inline-flex; }.nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 18px 22px 22px; background: var(--site-background); border-bottom: 1px solid var(--border); flex-direction: column; align-items: stretch; gap: 0; }.nav-links.open { display: flex; }.nav-links a { padding: 12px 0; font-size:14px; }.hero { padding: 55px 0 45px; }.hero-grid { grid-template-columns: minmax(0,1fr); gap:14px; }.hero-copy { font-size: 14px; }.profile-art { min-height: 250px; margin-top: 0; }.profile-orbit { width: min(230px,68vw); }.profile-photo {height:86%;}.chip-one { left: 2%; top: 22px; }.chip-two { right: 2%; bottom: 22px; }.quick-facts { gap: 14px; margin-top: 26px; }.section { padding: 55px 0; }.about-grid { grid-template-columns: minmax(0,1fr); }.about-highlight { min-height: 210px; }.skills-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }.skill { padding: 15px; min-height: 125px; }.project-grid { grid-template-columns: minmax(0,1fr); }.project:last-child { grid-column: auto; }.project p { min-height: auto; }.task-form {flex-direction:column}.task-form input,.task-form button {width:100%;min-width:0}.achievement-grid { grid-template-columns: minmax(0,1fr); }.contact-box { grid-template-columns: minmax(0,1fr); gap:24px; padding:22px; }.contact-form {min-width:0;padding:20px}.contact-detail a {font-size:12px}.footer-inner { flex-direction: column; align-items: flex-start; }.socials {flex-wrap:wrap} h1 {overflow-wrap:anywhere} }
 @media (max-width: 380px) { .wrap {width:calc(100% - 24px)}.brand {gap:7px}.brand-mark {width:34px;height:34px}.brand-name {font-size:11px}.hero-actions .btn {width:100%}.skills-grid {grid-template-columns:minmax(0,1fr)}.fact strong {font-size:14px}.contact-box {padding:16px} }
 </style>
 </head>
 <body>
+<noscript><p style="padding:12px;text-align:center;background:#fff0f6;color:#6d2446">This portfolio works best with JavaScript enabled. The main content is still available below.</p></noscript>
 <div id="app" data-sites-preview-theme="custom">
   <header class="nav-shell">
     <nav class="nav wrap" aria-label="Main navigation">
@@ -133,7 +133,7 @@ footer { padding: 28px 0; color: var(--muted); font-size: 12px; }.footer-inner {
           <div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore My Work <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#about">More About Me <span aria-hidden="true">↓</span></a></div>
           <div class="quick-facts"><div class="fact"><strong>Software</strong><span>Development</span></div><div class="fact"><strong>SQL · Python</strong><span>Learning & practicing</span></div><div class="fact"><strong>Always curious</strong><span>Growth mindset</span></div></div>
         </div>
-        <div class="profile-art" aria-label="Profile photo of Birdaus Aliya"><div class="profile-orbit"><img class="profile-photo" src="aliya_profile_small.jpg" alt="Birdaus Aliya wearing a pink hijab and black blazer"></div><div class="float-chip chip-one">✦ Problem Solver</div><div class="float-chip chip-two">⌘ Keep Building</div></div>
+        <div class="profile-art" aria-label="Profile photo of Birdaus Aliya"><div class="profile-orbit"><img class="profile-photo" src="aliya_profile_small.jpg" alt="Birdaus Aliya profile photo" onerror="this.style.display='none'"></div><div class="float-chip chip-one">✦ Problem Solver</div><div class="float-chip chip-two">⌘ Keep Building</div></div>
       </div>
     </section>
     <section class="section" id="about"><div class="wrap">
@@ -155,7 +155,7 @@ footer { padding: 28px 0; color: var(--muted); font-size: 12px; }.footer-inner {
       <div class="panel timeline reveal"><div class="timeline-item"><div class="timeline-icon">01</div><div><div class="timeline-date">EDUCATION</div><h3>Master of Computer Applications (MCA)</h3><p>Academic background in computer applications, programming, software concepts, and databases.</p></div></div><div class="timeline-item"><div class="timeline-icon">02</div><div><div class="timeline-date">FOUNDATION</div><h3>Computer Science & Programming</h3><p>Strengthening core concepts through hands-on exercises in SQL, Python, Java, and web technologies.</p></div></div><div class="timeline-item"><div class="timeline-icon">03</div><div><div class="timeline-date">PROJECTS</div><h3>Practical Work & Professional Growth</h3><p>Building practical projects, documenting what I learn, and preparing for entry-level software and IT opportunities.</p></div></div></div>
     </div></section>
     <section class="section" id="achievements"><div class="wrap"><div class="section-head reveal"><div class="kicker">Milestones</div><h2>Learning is an <span class="gradient-text">achievement too</span></h2><p>Add real certifications, hackathons, coursework, and accomplishments here when you have them.</p></div><div class="achievement-grid reveal"><article class="achievement"><div class="symbol">✦</div><strong>Technical Learning</strong><p>Consistent practice with programming and database fundamentals.</p></article><article class="achievement"><div class="symbol">⌘</div><strong>Hands-on Projects</strong><p>Turning concepts into small, demonstrable projects.</p></article><article class="achievement"><div class="symbol">↗</div><strong>Career Preparation</strong><p>Developing communication, problem-solving, and interview skills.</p></article></div></div></section>
-    <section class="section" id="contact"><div class="wrap"><div class="contact-box reveal"><div><div class="kicker">Let's connect</div><h2>Let's Build Something Meaningful</h2><p>Whether it's a project idea, collaboration, or an entry-level opportunity, I'm happy to connect, share ideas, and keep learning.</p><div class="contact-details"><div class="contact-detail"><span class="contact-detail-icon">✉</span><div><small>Email</small><a href="mailto:firdaus.aliyaofficial@gmail.com">firdaus.aliyaofficial@gmail.com</a></div></div><div class="contact-detail"><span class="contact-detail-icon">in</span><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/firdaus-aliya" target="_blank" rel="noreferrer">linkedin.com/in/firdaus-aliya</a></div></div><div class="contact-detail"><span class="contact-detail-icon">⌘</span><div><small>GitHub</small><a href="https://github.com/Birdaus-Aliya" target="_blank" rel="noreferrer">github.com/Birdaus-Aliya</a></div></div></div></div><form class="contact-form" id="contactForm"><label for="contactName">Full Name<input id="contactName" name="name" autocomplete="name" required placeholder="Your name"></label><label for="contactEmail">Email Address<input id="contactEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label><label for="contactMessage">Tell me about your project or opportunity<textarea id="contactMessage" name="message" required placeholder="Write your message..."></textarea></label><button class="btn btn-primary" type="submit">Let's Connect ↗</button><p class="form-note" id="contactFormNote" aria-live="polite">This form opens your email app with the message ready to send.</p></form></div></div></section>
+    <section class="section" id="contact"><div class="wrap"><div class="contact-box reveal"><div><div class="kicker">Let's connect</div><h2>Let's Build Something Meaningful</h2><p>Whether it's a project idea, collaboration, or an entry-level opportunity, I'm happy to connect, share ideas, and keep learning.</p><div class="contact-details"><div class="contact-detail"><span class="contact-detail-icon">✉</span><div><small>Email</small><a href="mailto:firdaus.aliyaofficial@gmail.com">firdaus.aliyaofficial@gmail.com</a></div></div><div class="contact-detail"><span class="contact-detail-icon">in</span><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/firdaus-aliya" target="_blank" rel="noreferrer">linkedin.com/in/firdaus-aliya</a></div></div><div class="contact-detail"><span class="contact-detail-icon">⌘</span><div><small>GitHub</small><a href="https://github.com/Birdaus-Aliya" target="_blank" rel="noreferrer">github.com/Birdaus-Aliya</a></div></div></div></div><form class="contact-form" id="contactForm" action="https://formspree.io/f/mvkkqepq" method="POST"><label for="contactName">Full Name<input id="contactName" name="name" autocomplete="name" required placeholder="Your name"></label><label for="contactEmail">Email Address<input id="contactEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label><label for="contactMessage">Tell me about your project or opportunity<textarea id="contactMessage" name="message" required placeholder="Write your message..."></textarea></label><input type="hidden" name="_subject" value="New message from Birdaus Aliya portfolio"><button class="btn btn-primary" type="submit">Let's Connect ↗</button><p class="form-note" id="contactFormNote" role="status" aria-live="polite">Your message will be sent securely through this contact form.</p></form></div></div></section>
   </main>
   <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Birdaus Aliya. Built with curiosity and care.</span><div class="socials"><a href="#home">Back to top ↑</a><a href="https://github.com/Birdaus-Aliya" target="_blank" rel="noreferrer">GitHub</a><a href="#contact">Contact</a></div></div></footer>
 </div>
@@ -198,26 +198,36 @@ function renderTasks() {
   taskCount.textContent = `${tasks.length} task${tasks.length === 1 ? '' : 's'} · ${remaining} remaining`;
 }
 taskForm.addEventListener('submit', event => { event.preventDefault(); const text = taskInput.value.trim(); if (!text) return; tasks.push({ id: Date.now() + Math.random(), text, done: false }); taskInput.value = ''; renderTasks(); taskInput.focus(); });
-
 const contactForm = document.getElementById('contactForm');
+const contactFormNote = document.getElementById('contactFormNote');
 
-contactForm.addEventListener('submit', function(event) {
-    event.preventDefault();
+contactForm.addEventListener('submit', async event => {
+  event.preventDefault();
+  if (!contactForm.reportValidity()) return;
 
-    const name = document.getElementById('contactName').value.trim();
-    const email = document.getElementById('contactEmail').value.trim();
-    const message = document.getElementById('contactMessage').value.trim();
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  contactFormNote.textContent = 'Sending your message...';
 
-    const subject = encodeURIComponent("New message from my portfolio");
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { Accept: 'application/json' }
+    });
 
-    const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
-    );
-
-    window.location.href =
-        `mailto:firdaus.aliyaofficial@gmail.com?subject=${subject}&body=${body}`;
+    if (response.ok) {
+      contactForm.reset();
+      contactFormNote.textContent = 'Thank you! Your message has been sent successfully.';
+    } else {
+      contactFormNote.textContent = 'Sorry, your message could not be sent. Please try again.';
+    }
+  } catch (error) {
+    contactFormNote.textContent = 'Network error. Please check your connection and try again.';
+  } finally {
+    submitButton.disabled = false;
+  }
 });
-
 const sections = [...document.querySelectorAll('main section[id]')];
 if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
