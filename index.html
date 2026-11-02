@@ -163,7 +163,7 @@ footer { padding: 28px 0; color: var(--muted); font-size: 12px; }.footer-inner {
       <div class="panel timeline reveal"><div class="timeline-item"><div class="timeline-icon">01</div><div><div class="timeline-date">EDUCATION</div><h3>Master of Computer Applications (MCA)</h3><p>Academic background in computer applications, programming, software concepts, and databases.</p></div></div><div class="timeline-item"><div class="timeline-icon">02</div><div><div class="timeline-date">FOUNDATION</div><h3>Computer Science & Programming</h3><p>Strengthening core concepts through hands-on exercises in SQL, Python, Java, and web technologies.</p></div></div><div class="timeline-item"><div class="timeline-icon">03</div><div><div class="timeline-date">PROJECTS</div><h3>Practical Work & Professional Growth</h3><p>Building practical projects, documenting what I learn, and preparing for entry-level software and IT opportunities.</p></div></div></div>
     </div></section>
     <section class="section" id="achievements"><div class="wrap"><div class="section-head reveal"><div class="kicker">Milestones</div><h2>Learning is an <span class="gradient-text">achievement too</span></h2><p>Add real certifications, hackathons, coursework, and accomplishments here when you have them.</p></div><div class="achievement-grid reveal"><article class="achievement"><div class="symbol">✦</div><strong>Technical Learning</strong><p>Consistent practice with programming and database fundamentals.</p></article><article class="achievement"><div class="symbol">⌘</div><strong>Hands-on Projects</strong><p>Turning concepts into small, demonstrable projects.</p></article><article class="achievement"><div class="symbol">↗</div><strong>Career Preparation</strong><p>Developing communication, problem-solving, and interview skills.</p></article></div></div></section>
-    <section class="section" id="contact"><div class="wrap"><div class="contact-box reveal"><div><div class="kicker">Let's connect</div><h2>Let's Build Something Meaningful</h2><p>Whether it's a project idea, collaboration, or an entry-level opportunity, I'm happy to connect, share ideas, and keep learning.</p><div class="contact-details"><div class="contact-detail"><span class="contact-detail-icon">✉</span><div><small>Email</small><a href="mailto:firdaus.aliyaofficial@gmail.com">firdaus.aliyaofficial@gmail.com</a></div></div><div class="contact-detail"><span class="contact-detail-icon">in</span><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/firdaus-aliya" target="_blank" rel="noreferrer">linkedin.com/in/firdaus-aliya</a></div></div><div class="contact-detail"><span class="contact-detail-icon">⌘</span><div><small>GitHub</small><a href="https://github.com/Birdaus-Aliya" target="_blank" rel="noreferrer">github.com/Birdaus-Aliya</a></div></div></div></div><form class="contact-form" id="contactForm"><label for="contactName">Full Name<input id="contactName" name="name" autocomplete="name" required placeholder="Your name"></label><label for="contactEmail">Email Address<input id="contactEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label><label for="contactMessage">Tell me about your project or opportunity<textarea id="contactMessage" name="message" required placeholder="Write your message..."></textarea></label><button class="btn btn-primary" type="submit">Let's Connect ↗</button><p class="form-note" id="contactFormNote" aria-live="polite">This form opens your email app with the message ready to send.</p></form></div></div></section>
+    <section class="section" id="contact"><div class="wrap"><div class="contact-box reveal"><div><div class="kicker">Let's connect</div><h2>Let's Build Something Meaningful</h2><p>Whether it's a project idea, collaboration, or an entry-level opportunity, I'm happy to connect, share ideas, and keep learning.</p><div class="contact-details"><div class="contact-detail"><span class="contact-detail-icon">✉</span><div><small>Email</small><a href="mailto:firdaus.aliyaofficial@gmail.com">firdaus.aliyaofficial@gmail.com</a></div></div><div class="contact-detail"><span class="contact-detail-icon">in</span><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/firdaus-aliya" target="_blank" rel="noreferrer">linkedin.com/in/firdaus-aliya</a></div></div><div class="contact-detail"><span class="contact-detail-icon">⌘</span><div><small>GitHub</small><a href="https://github.com/Birdaus-Aliya" target="_blank" rel="noreferrer">github.com/Birdaus-Aliya</a></div></div></div></div><form class="contact-form" id="contactForm" action="https://formspree.io/f/mvkkqepq" method="POST"><label for="contactName">Full Name<input id="contactName" name="name" autocomplete="name" required placeholder="Your name"></label><label for="contactEmail">Email Address<input id="contactEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label><label for="contactMessage">Tell me about your project or opportunity<textarea id="contactMessage" name="message" required placeholder="Write your message..."></textarea></label><button class="btn btn-primary" type="submit">Let's Connect ↗</button><p class="form-note" id="contactFormNote" aria-live="polite">Your message will be sent securely through this contact form.</p></form></div></div></section>
   </main>
   <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Birdaus Aliya. Built with curiosity and care.</span><div class="socials"><a href="#home">Back to top ↑</a><a href="https://github.com/Birdaus-Aliya" target="_blank" rel="noreferrer">GitHub</a><a href="#contact">Contact</a></div></div></footer>
 </div>
@@ -208,29 +208,11 @@ function renderTasks() {
 }
 if (taskForm && taskInput && taskList && taskCount) { taskForm.addEventListener('submit', event => { event.preventDefault(); const text = taskInput.value.trim(); if (!text) return; tasks.push({ id: Date.now() + Math.random(), text, done: false }); taskInput.value = ''; renderTasks(); taskInput.focus(); }); }
 const contactForm = document.getElementById('contactForm');
-contactForm.action = '#';
-contactForm.method = 'POST';
-document.getElementById('contactFormNote').textContent = 'Click Send Message to open your email app.';
 const subjectField = document.createElement('input');
-subjectField.type = 'hidden'; subjectField.name = '_subject'; subjectField.value = "New message from Birdaus Aliya's portfolio";
-const templateField = document.createElement('input');
-templateField.type = 'hidden'; templateField.name = '_template'; templateField.value = 'table';
-contactForm.append(subjectField, templateField);
-  contactForm.addEventListener('submit', event => {
-    event.preventDefault();
-
-    const formData = new FormData(contactForm);
-    const subject = encodeURIComponent("New message from my portfolio");
-    const body = encodeURIComponent(
-        [...formData.entries()]
-        .filter(([key]) => key !== '_subject' && key !== '_template')
-        .map(([key, value]) => `${key}: ${value}`)
-        .join('\n')
-    );
-
-    window.location.href =
-        `mailto:firdaus.aliyaofficial@gmail.com?subject=${subject}&body=${body}`;
-});
+subjectField.type = 'hidden';
+subjectField.name = '_subject';
+subjectField.value = "New message from Birdaus Aliya's portfolio";
+contactForm.append(subjectField);
 const sections = [...document.querySelectorAll('main section[id]')];
 if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
